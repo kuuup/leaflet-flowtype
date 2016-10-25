@@ -1,0 +1,21 @@
+declare interface LeafletLatLngBounds {
+    extend(latLng: LeafletLatLng): LeafletPoint,
+    extend(otherBounds: LeafletLatLngBounds): LeafletPoint,
+    pad(bufferRatio: number): LeafletLatLngBounds,
+    getCenter(): LeafletLatLng,
+    getSouthWest(): LeafletLatLng,
+    getNorthEast(): LeafletLatLng,
+    getNorthWest(): LeafletLatLng,
+    getSouthEast(): LeafletLatLng,
+    getWest(): number,
+    getSouth(): number,
+    getEast(): number,
+    getNorth(): number,
+    contains(otherBounds: LeafletLatLngBounds): boolean,
+    contains(latLng: LeafletLatLng): boolean,
+    intersects(otherBounds: LeafletLatLngBounds): boolean,
+    overlaps(otherBounds: LeafletBounds): boolean,
+    toBBoxString(): string,
+    equals(otherBounds: LeafletLatLngBounds): boolean,
+    isValid(): boolean
+}
